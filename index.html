@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldrien Tamba - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f7e4c7;
+      color: #1f2937;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .logo-top-left img {
+      height: 130px;
+      width: 130px;
+      object-fit: contain;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-top-left img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    header {
+      background-color: #7b7b7b;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .header-box {
+      display: inline-block;
+      padding: 20px 40px;
+      background-color: #968f8f;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 28px;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+
+    .header-box:hover {
+      background-color: #1f2937;
+      color: #ffffff;
+      transform: scale(1.05);
+      border-color: #1f2937;
+      box-shadow: 0 0 15px rgba(31, 41, 55, 0.5);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #1f2937;
+      color: white;
+      padding: 15px 30px;
+      margin: 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .button:hover {
+      background-color: #374151;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      background-color: #968f8f;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .logo-top-left img {
+        height: 100px;
+        width: 100px;
+      }
+
+      .header-box {
+        font-size: 22px;
+        padding: 15px 30px;
+        text-align: center;
+      }
+
+      .button {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 90%;
+        margin: 10px 0;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      footer img {
+        max-width: 150px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-top-left img {
+        height: 80px;
+        width: 80px;
+      }
+
+      .header-box {
+        font-size: 20px;
+        padding: 10px 20px;
+      }
+
+      .button {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-top-left">
+    <img src="logo_portfolio.png" alt="A.S.T Logo" />
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="header-box">Welcome to My Website</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <a href="about.html" class="button">About Myself</a>
+    <a href="portfolio.html" class="button">Portfolio</a>
+    <a href="contact.html" class="button">Contact Details</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Aldrien Tamba. All rights reserved.</p>
+    <img src="footer_design.png" alt="Footer Design" style="max-width: 200px; margin-top: 10px;" />
+  </footer>
+
+</body>
+</html>
