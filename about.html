@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldrien Tamba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f7e4c7;
+      color: #1f2937;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease;
+    }
+
+    .logo-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      animation: floatLogo 2.5s ease-in-out infinite alternate;
+    }
+
+    .logo-top-left img {
+      height: 150px;
+      width: 150px;
+      object-fit: contain;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-top-left img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    .photo-top-right {
+      position: absolute;
+      top: 80px;
+      right: 30px;
+      background: white;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 140px;
+      animation: fadeInPhoto 1s ease forwards;
+      z-index: 900;
+    }
+
+    .photo-top-right img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeInPhoto {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: #7b7b7b;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    nav button {
+      background-color: #1f2937;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav button:hover {
+      background-color: #374151;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .intro-box, .bio-box {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .bio-box {
+      animation-delay: 0.5s;
+    }
+
+    .intro-box h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 8px #fff;
+    }
+
+    .bio-box p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    footer {
+      position: relative;
+      background-color: #968f8f;
+      padding: 30px 15px 60px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    footer img {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      max-width: 250px;
+      opacity: 0;
+      transform: translateX(30px);
+      animation: slideInRight 1s ease forwards 1.5s;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(30px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-top-left">
+    <img src="logo_portfolio.png" alt="A.S.T Logo" />
+  </div>
+
+  <div class="photo-top-right">
+    <img src="self.png" alt="Aldrien Tamba Photo" />
+  </div>
+
+  <header>
+    <nav>
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='portfolio.html'">Portfolio</button>
+      <button onclick="window.location.href='contact.html'">Contact Details</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro-box">
+      <h1>Aldrien Tamba</h1>
+    </div>
+
+    <div class="bio-box">
+      <p>
+        My name is Aldrien Tamba, a 19-year-old first-year Bachelor of Science in Information Technology (BSIT) student at Our Lady of Fatima University. I currently reside in North Caloocan.
+        <br><br>
+        As a passionate and dedicated student, I am eager to expand my knowledge and skills in the field of Information Technology, with a particular interest in graphic design and website development. I am committed to continuously learning and improving, and I aim to explore creative and innovative ways to apply my knowledge in real-world settings.
+        <br><br>
+        Through my studies and personal growth, I hope to become a well-rounded IT professional capable of contributing to the evolving digital landscape.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>aldrientamba123@gmail.com | 0992-9015-206</p>
+    <img src="footer_design.png" alt="Footer Design" />
+  </footer>
+
+</body>
+</html>
